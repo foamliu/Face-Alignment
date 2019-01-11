@@ -7,14 +7,14 @@ from warp_and_crop_face import warp_and_crop_face
 
 if __name__ == "__main__":
     for i in range(10):
-        img_fn = 'images/{}_img.jpg'.format(i)
+        img_fn = 'images/{}_raw.jpg'.format(i)
         print('Loading image {}'.format(img_fn))
-        image = cv.imread(img_fn, True)
+        raw = cv.imread(img_fn, True)
         img = Image.open(img_fn).convert('RGB')
         _, facial5points = detect_faces(img)
         facial5points = np.reshape(facial5points[0], (2, 5))
         crop_size = (112, 112)
-
-        dst_img = warp_and_crop_face(image,
-                                     facial5points)
+        dst_img = warp_and_crop_face(raw, facial5points)
         cv.imwrite('images/{}_warped.jpg'.format(i), dst_img)
+        img = cv.resize(raw, (224, 224))
+        cv.imwrite('images/{}_img.jpg'.format(i), img)
