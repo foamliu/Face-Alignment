@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 
 from mtcnn.detector import detect_faces
-from warp_and_crop_face import warp_and_crop_face, get_reference_facial_points
+from align_faces import warp_and_crop_face, get_reference_facial_points
 
 if __name__ == "__main__":
     for i in range(10):
