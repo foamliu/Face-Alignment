@@ -2,8 +2,8 @@ import cv2 as cv
 import numpy as np
 from PIL import Image
 
+from align_faces import warp_and_crop_face, get_reference_facial_points
 from mtcnn.detector import detect_faces
-from warp_and_crop_face import get_reference_facial_points, warp_and_crop_face
 
 if __name__ == "__main__":
     for i in range(10):
