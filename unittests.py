@@ -1,10 +1,14 @@
 import unittest
-from PIL import Image
+
 import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
-from mtcnn.detector import detect_faces
+from PIL import Image
+
 from align_faces import REFERENCE_FACIAL_POINTS, get_reference_facial_points, warp_and_crop_face
+from mtcnn.detector import MtcnnDetector
+
+detector = MtcnnDetector()
 
 
 def crop_test(image,
@@ -41,7 +45,7 @@ class TestMethods(unittest.TestCase):
         img_fn = 'images/0_img.jpg'
         self.image = cv.imread(img_fn, True)
         img = Image.open(img_fn).convert('RGB')
-        _, facial5points = detect_faces(img)
+        _, facial5points = detector.detect_faces(img)
         facial5points = np.reshape(facial5points[0], (2, 5))
         self.facial5points = facial5points
 
