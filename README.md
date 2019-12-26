@@ -30,7 +30,7 @@ Image | 224x224 | 112x112|
 $ python align_retinaface.py
 ```
 
-Image | 224x224 | 112x112|
+Image | 224x224 | 112x112 |
 |---|---|---|
 |![image](https://github.com/foamliu/Face-Alignment/raw/master/images/0_img.jpg)|![image](https://github.com/foamliu/Face-Alignment/raw/master/images/0_retinaface_aligned_224x224.jpg)|![image](https://github.com/foamliu/Face-Alignment/raw/master/images/0_retinaface_aligned_112x112.jpg)|
 |![image](https://github.com/foamliu/Face-Alignment/raw/master/images/1_img.jpg)|![image](https://github.com/foamliu/Face-Alignment/raw/master/images/1_retinaface_aligned_224x224.jpg)|![image](https://github.com/foamliu/Face-Alignment/raw/master/images/1_retinaface_aligned_112x112.jpg)|

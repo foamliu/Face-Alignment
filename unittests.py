@@ -43,9 +43,8 @@ class TestMethods(unittest.TestCase):
 
     def setUp(self):
         img_fn = 'images/0_img.jpg'
-        self.image = cv.imread(img_fn, True)
-        img = Image.open(img_fn).convert('RGB')
-        _, facial5points = detector.detect_faces(img)
+        self.image = cv.imread(img_fn)
+        _, facial5points = detector.detect_faces(self.image)
         facial5points = np.reshape(facial5points[0], (2, 5))
         self.facial5points = facial5points
 
