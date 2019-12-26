@@ -2,10 +2,11 @@
 
 Face alignment with similarity transform based on MTCNN and RetinaFace.
 
-## 如何使用
+## Usage
 
 ```bash
-$ python demo.py
+$ python align_mtcnn.py
+$ python align_retinaface.py
 ```
 
 Image | MTCNN aligned | Retinaface aligned|
